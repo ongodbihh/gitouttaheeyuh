@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<style>
+body {
+
+color:green;
+font-size:20px;
+
+background-image:url(https://i.pinimg.com/originals/92/c5/b2/92c5b20f647f2b2d546ee54131f18148.gif);
+}
+button{
+     posiition: relative;
+    top: 10px;
+    left: 20px;
+    height:50px;
+    width:150px;
+    font-size:25px;
+    background-color:lightgreen;
+}
+</style>
+
+<script>
+$(function() {
+
+      var curLesson = 1;
+
+      $('div.lesson:not(:first)').hide();
+
+      $('#next').click(function() {
+
+        if (curLesson < 15) {
+
+             $('#lesson' + curLesson).hide();
+
+                curLesson++;
+
+            $('#lesson' + curLesson).show();
+        }
+
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        return false;
+
+    });
+
+    $('#prev').click(function() {
+
+         if (curLesson > 1) {
+
+            $('#lesson' + curLesson).hide();
+
+                curLesson--;
+
+                $('#lesson' + curLesson).show();
+
+        }
+
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+
+    });
+
+});
+</script>
+
+<html>
+    <head>
+        <title>pwning n00bs lel</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+
+
+<div id="lesson1" class="lesson">
+<h1>read this if ur queer</h1>
+    <p>lol pwned matrix style</p>
